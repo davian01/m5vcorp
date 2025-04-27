@@ -1,7 +1,13 @@
 import React from 'react';
 
-const Projects = () => {
-  const projects = [
+interface Project {
+  name: string;
+  location: string;
+  year: string;
+}
+
+const Projects = (): JSX.Element => {
+  const projects: Project[] = [
     { name: 'Project Name', location: 'City, Province', year: '2025' },
     { name: 'Project Name', location: 'City, Province', year: '2025' },
     { name: 'Project Name', location: 'City, Province', year: '2025' },
@@ -25,7 +31,7 @@ const Projects = () => {
             </tr>
           </thead>
           <tbody>
-            {projects.map((project, index) => (
+            {projects.map((project: Project, index: number) => (
               <tr key={index} className="border-b hover:text-accent-blue">
                 <td className="py-4">{project.name}</td>
                 <td className="py-4">{project.location}</td>
