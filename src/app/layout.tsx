@@ -24,10 +24,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className="min-h-screen bg-white text-black antialiased flex flex-col">
+    <html lang="en" className="h-full">
+      <body className="min-h-screen bg-off-white text-black-primary antialiased flex flex-col font-calibre">
         <StickyHeader />
-        <main className="flex-grow">{children}</main>
+        <main className="flex-grow flex flex-col">{children}</main>
         <Footer />
       </body>
     </html>
