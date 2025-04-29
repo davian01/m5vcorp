@@ -68,56 +68,62 @@ export default function TeamPage() {
   ];
 
   return (
-    <>
+    <main className="min-h-screen">
       <StickyHeader />
-      <div className="min-h-screen bg-gray-50 py-12 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center">
-            <h1 className="text-4xl font-bold text-gray-900 sm:text-5xl md:text-6xl">
-              Our Team
-            </h1>
-            <p className="mt-3 max-w-md mx-auto text-base text-gray-500 sm:text-lg md:mt-5 md:text-xl md:max-w-3xl">
-              Meet the talented individuals behind our success. Each team member brings unique expertise and passion to our mission.
-            </p>
-          </div>
+      
+      {/* Hero Section */}
+      <div className="w-full relative pt-56 pb-16 px-8 text-white mt-[72px]" style={{ minHeight: '340px' }}>
+        {/* Background image */}
+        <Image
+          src="/images/niagara-falls.png"
+          alt="Our Team"
+          fill
+          className="object-cover object-center z-0"
+          priority
+        />
+        {/* Color overlay */}
+        <div className="absolute inset-0 bg-[#008DB7]/90 z-10" />
+        {/* Headline content */}
+        <div className="max-w-5xl mx-auto relative z-20">
+          <p className="uppercase font-semibold tracking-widest text-sm mb-2">TEAM</p>
+          <h1 className="text-3xl sm:text-4xl md:text-5xl font-light mb-2">Meet the Minds</h1>
+          <h1 className="text-3xl sm:text-4xl md:text-5xl font-light">Building the Future.</h1>
+        </div>
+      </div>
 
-          <div className="mt-12 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+      {/* Team Grid Section */}
+      <section className="bg-white py-16">
+        <div className="max-w-7xl mx-auto px-4">
+          <div className="grid gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
             {teamMembers.map((member) => (
               <Link
                 key={member.slug}
                 href={`/team/${member.slug}`}
                 className="group"
               >
-                <div
-                  className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 cursor-pointer h-full flex flex-col"
-                >
-                  <div className="relative h-64 w-full">
-                    {member.image ? (
-                      <Image
-                        src={member.image}
-                        alt={member.name}
-                        fill
-                        className="object-cover group-hover:scale-105 transition-transform duration-300"
-                      />
-                    ) : (
-                      <div className="absolute inset-0 bg-gray-200 flex items-center justify-center">
-                        <span className="text-gray-400">No image available</span>
-                      </div>
-                    )}
-                  </div>
-                  <div className="p-6 flex-1 flex flex-col">
-                    <h3 className="text-lg font-semibold text-gray-900">{member.name}</h3>
-                    <p className="text-sm text-accent-blue">{member.position}</p>
-                    {member.bio && (
-                      <p className="mt-2 text-sm text-gray-500">{member.bio}</p>
-                    )}
+                <div className="relative aspect-[4/5] overflow-hidden">
+                  {member.image ? (
+                    <Image
+                      src={member.image}
+                      alt={member.name}
+                      fill
+                      className="object-cover group-hover:scale-105 transition-transform duration-300"
+                    />
+                  ) : (
+                    <div className="absolute inset-0 bg-gray-200 flex items-center justify-center">
+                      <span className="text-gray-400">No image available</span>
+                    </div>
+                  )}
+                  <div className="absolute bottom-0 right-0 w-full bg-black bg-opacity-50 p-6 text-right">
+                    <h3 className="text-white text-2xl font-medium">{member.name}</h3>
+                    <p className="text-white text-lg">{member.position}</p>
                   </div>
                 </div>
               </Link>
             ))}
           </div>
         </div>
-      </div>
-    </>
+      </section>
+    </main>
   );
 } 
