@@ -23,7 +23,7 @@ export default function CompanyPage(): JSX.Element {
         />
         <div className="absolute inset-0 bg-accent-blue/80 z-10" />
         <div className="max-w-5xl mx-auto relative z-20">
-          <p className="uppercase font-semibold tracking-widest text-sm mb-2">Team</p>
+          <p className="uppercase font-semibold tracking-widest text-sm mb-2">Company</p>
           <h1 className="text-3xl sm:text-4xl md:text-5xl font-light mb-2">Value and Design,</h1>
           <h1 className="text-3xl sm:text-4xl md:text-5xl font-light">Finally on the Same Page.</h1>
         </div>

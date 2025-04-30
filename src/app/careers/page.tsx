@@ -44,9 +44,9 @@ export default function CareersPage() {
       </div>
 
       {/* Intro Section */}
-      <section className="bg-white py-16">
-        <div className="container mx-auto px-4 flex flex-col md:flex-row items-center justify-between gap-12">
-          <div className="hidden md:block md:w-2/5 h-[400px] bg-gray-400 ml-4" />
+      <section className="bg-off-white py-16">
+        <div className="container mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-12">
+          <div className="md:w-2/5 h-[400px] bg-gray-400" />
           <div className="w-full md:w-1/2 flex flex-col items-end text-right space-y-2 max-w-2xl pr-12 md:pr-24 lg:pr-32">
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-light mb-1">Ambitious Projects Need Ambitious People</h2>
             <p className="text-body leading-snug mb-1">We are community-driven and individually empowered — with a belief in hiring ambitious, purpose-led people and giving them the tools to grow.</p>
@@ -57,17 +57,17 @@ export default function CareersPage() {
       </section>
 
       {/* Values Section ("WHAT WE BELIEVE") */}
-      <section className="w-full bg-transparent">
-        <div className="container mx-auto px-4 flex flex-col md:flex-row min-h-[480px]">
+      <section className="w-full bg-black-primary text-white">
+        <div className="container mx-auto px-6 grid grid-cols-1 md:grid-cols-[1fr_3fr] gap-8 min-h-[480px]">
           {/* Left panel */}
-          <div className="bg-black-primary text-white md:w-1/3 w-full flex flex-col justify-center items-start p-8 md:p-10 min-w-[220px] flex-shrink-0">
+          <div className="flex flex-col justify-center p-8">
             <div className="uppercase font-semibold tracking-widest text-sm mb-4">WHAT WE BELIEVE</div>
             <h3 className="text-3xl sm:text-4xl md:text-5xl font-light mb-4">Built on Values. Driven by Purpose.</h3>
             <p className="text-body leading-snug mb-1">At M5V, our work isn't just about buildings, it's about creating impact that lasts. Every project, every partnership, and every decision we make is guided by a set of values we live by daily.</p>
             <p className="text-body leading-snug mb-1">Here's what drives us..</p>
           </div>
           {/* Right panel: vertical accent-blue bars */}
-          <div className="flex flex-1 flex-row md:w-3/5 w-full overflow-x-auto md:overflow-x-visible">
+          <div className="flex flex-1 flex-row overflow-x-auto md:overflow-x-visible">
             {values.map((val, i) => (
               <div
                 key={i}
@@ -100,8 +100,8 @@ export default function CareersPage() {
       </section>
 
       {/* Benefits List */}
-      <section className="bg-white py-16">
-        <div className="container mx-auto px-4">
+      <section className="bg-off-white py-16">
+        <div className="container mx-auto px-14">
           <h2 className="text-h2 font-bold font-calibre text-black-primary">Why Work for Us</h2>
           <p className="mt-2 mb-8 text-body">Our Commitment to Talent and Growth</p>
           <div className="space-y-4">
@@ -127,7 +127,7 @@ export default function CareersPage() {
 
       {/* Footer CTAs */}
       <section className="bg-black-primary text-off-white py-12">
-        <div className="container mx-auto px-4 grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="container mx-auto px-16 grid grid-cols-1 md:grid-cols-2 gap-8">
           {/* Left */}
           <div>
             <h3 className="text-h3 font-bold">Ready to take the Next Step?</h3>

@@ -139,7 +139,7 @@ export default function TeamPage() {
             onClick={() => setSelectedMember(null)}
           />
           {/* Modal panel */}
-          <div className="relative z-20 bg-white max-w-4xl w-full rounded-lg shadow-xl overflow-hidden flex flex-col md:flex-row">
+          <div className="relative z-20 bg-white max-w-4xl w-full shadow-xl overflow-hidden flex flex-col md:flex-row">
             {/* Left: 5:8 headshot (1/3 width) */}
             <div className="relative w-full md:w-1/3 aspect-[5/8] overflow-hidden">
               <Image

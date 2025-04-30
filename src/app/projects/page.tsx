@@ -46,7 +46,7 @@ const projects: Project[] = [
   },
   {
     name: 'THE NIAGARA PHASE 1',
-    slug: 'the-niagara-phase-1',
+    slug: 'niagara-phase-1',
     location: 'Niagara Falls, Ontario',
     status: 'Completed',
     type: 'Development',
