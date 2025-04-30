@@ -43,7 +43,7 @@ export function Footer() {
 
   return (
     <footer className="bg-accent-blue text-off-white py-12">
-      <div className="container mx-auto px-4">
+      <div className="container mx-auto px-16">
         {/* Main footer content */}
         <div className="lg:grid lg:grid-cols-5 gap-8">
           {/* Logo column */}
