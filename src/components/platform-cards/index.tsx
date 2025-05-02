@@ -23,12 +23,12 @@ const PlatformCards = () => {
   ];
 
   return (
-    <section className="bg-[#fafaf5] py-24">
-      <div className="container mx-auto px-6">
-        <h2 className="text-sm uppercase tracking-wider font-medium text-left mb-4 text-black">
+    <section className="bg-off-white py-24">
+      <div className="container mx-auto px-16">
+        <h2 className="text-sm uppercase tracking-wider font-medium text-left mb-4 text-primary-black">
           What We Do
         </h2>
-        <p className="text-h2 font-bold text-left max-w-3xl mb-16 text-black">
+        <p className="text-h2 font-medium text-left max-w-3xl mb-16 text-primary-black">
           We create lasting value by building homes where people want—and can afford—to live.
         </p>
         
@@ -50,7 +50,7 @@ const PlatformCards = () => {
               </div>
 
               {/* Content */}
-              <div className="p-6">
+              <div className="py-6 px-8">
                 <h3 className="text-xl font-medium mb-3">
                   <span className="text-accent-blue">{platform.title}</span>
                 </h3>

@@ -12,7 +12,7 @@ const JointVenture = () => {
       {/* Content */}
       <div className="container mx-auto px-6 relative text-center">
         <div className="max-w-3xl mx-auto">
-          <h2 className="text-h2 text-off-white mb-6">
+          <h2 className="text-h2 text-off-white mb-6 font-medium">
             Introducing Le Falls by M5V Developments
           </h2>
           
@@ -21,7 +21,7 @@ const JointVenture = () => {
           </p>
 
           <button className="border border-off-white text-off-white hover:bg-accent-blue hover:border-accent-blue px-8 py-3 transition-colors">
-            Learn More
+            <a href="https://lefalls.com" target="_blank" rel="noopener noreferrer">Learn More</a>
           </button>
         </div>
       </div>

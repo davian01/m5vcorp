@@ -22,7 +22,7 @@ const WhoWeAre = () => {
 
   return (
     <section className="bg-black-primary text-off-white py-24">
-      <div className="container mx-auto px-6">
+      <div className="container mx-auto px-16">
         {/* Intro text */}
         <div className="max-w-4xl mb-20">
           <h2 className="text-sm uppercase tracking-wider font-medium mb-8">Who We Are</h2>

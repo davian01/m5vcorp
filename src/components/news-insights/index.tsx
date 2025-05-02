@@ -19,10 +19,13 @@ const NewsInsights = () => {
 
   return (
     <section className="bg-off-white py-24">
-      <div className="container mx-auto px-6">
+      <div className="container mx-auto px-16">
         {/* Header */}
+        <h2 className="text-sm uppercase tracking-wider font-medium text-left mb-4 text-accent-blue">
+          News & Insights
+        </h2>
         <div className="mb-16">
-          <h2 className="text-h2 mb-4">Stay up to date with our latest insights and firm announcements.</h2>
+          <h2 className="text-h2 mb-4 font-medium">Stay up to date with our latest insights and firm announcements.</h2>
         </div>
 
         {/* News Grid */}
@@ -58,7 +61,7 @@ const NewsInsights = () => {
         {/* View All Link */}
         <div className="mt-12 text-center">
           <a 
-            href="#" 
+            href="/news" 
             className="inline-flex items-center text-accent-blue hover:underline"
           >
             View All News & Insights

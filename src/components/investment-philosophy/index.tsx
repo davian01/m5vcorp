@@ -39,10 +39,10 @@ const InvestmentPhilosophy = () => {
         <div className="flex gap-12">
           {/* Left side - Text Content */}
           <div className="w-1/2">
-            <h2 className="text-sm uppercase tracking-wider font-medium mb-6 text-[#008db7]">
+            <h2 className="text-sm uppercase tracking-wider font-medium mb-6 text-accent-blue">
               How We Do It
             </h2>
-            <p className="text-h3 text-black mb-16">
+            <p className="text-h3 text-primary-black mb-16">
               Our integrated model maximizes value at every stage of development:
             </p>
 
@@ -57,14 +57,14 @@ const InvestmentPhilosophy = () => {
                 >
                   <div className="flex gap-6">
                     {/* Number */}
-                    <div className="text-5xl font-bold text-[#008db7]">
+                    <div className="text-4xl font-bold text-accent-blue">
                       {point.number}
                     </div>
                     {/* Content */}
                     <div>
-                      <h3 className="text-xl font-semibold text-black mb-3 flex items-center justify-between">
+                      <h3 className="text-xl font-medium text-primary-black mb-3 flex items-center justify-between">
                         {point.title}
-                        <svg className="w-4 h-4 text-[#008db7]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <svg className="w-4 h-4 text-accent-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                         </svg>
                       </h3>

@@ -25,7 +25,7 @@ const WhySecondaryMarkets = () => {
           <h3 className="text-sm uppercase tracking-wider font-medium mb-6 text-accent-blue">
             Why Secondary Markets
           </h3>
-          <h2 className="text-[2.75rem] leading-tight font-bold text-off-white">
+          <h2 className="text-[2.75rem] leading-tight font-medium  text-off-white">
             The Opportunity Outside Big-City Cores
           </h2>
         </div>
@@ -43,7 +43,7 @@ const WhySecondaryMarkets = () => {
               </div>
 
               {/* Title */}
-              <h3 className="text-lg font-semibold text-black-primary mb-4">
+              <h3 className="text-lg font-medium text-black-primary mb-4">
                 {card.title}
               </h3>
 
