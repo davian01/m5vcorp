@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from "next";
 import "./globals.css";
 import StickyHeader from "@/components/sticky-header";
 import { Footer } from "@/components/footer";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 export const viewport: Viewport = {
   width: "device-width",
@@ -29,6 +30,7 @@ export default function RootLayout({
         <StickyHeader />
         <main className="flex-grow flex flex-col">{children}</main>
         <Footer />
+        <SpeedInsights />
       </body>
     </html>
   );
