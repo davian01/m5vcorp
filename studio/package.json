@@ -1,5 +1,5 @@
 {
-  "name": "m5v",
+  "name": "m5v-corp",
   "private": true,
   "version": "1.0.0",
   "main": "package.json",
@@ -15,6 +15,7 @@
     "sanity"
   ],
   "dependencies": {
+    "@sanity/cli": "^3.86.1",
     "@sanity/vision": "^3.86.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
