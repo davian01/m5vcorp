@@ -45,9 +45,14 @@ const config: Config = {
             transform: 'translateY(0)'
           },
         },
+        'fade-in': {
+          '0%': { opacity: '0' },
+          '100%': { opacity: '1' },
+        },
       },
       animation: {
-        'fade-in-up-on-view': 'fade-in-up-on-view 0.8s ease-out forwards'
+        'fade-in-up-on-view': 'fade-in-up-on-view 0.8s ease-out forwards',
+        'fade-in': 'fade-in 1s ease-out forwards',
       }
     },
   },

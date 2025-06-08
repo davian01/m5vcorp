@@ -84,9 +84,9 @@ const statusColors: Record<string, string> = {
 
 const Projects = (): JSX.Element => {
   return (
-    <div className="bg-white min-h-screen text-black">
+    <div className="bg-off-white min-h-screen text-black-primary">
       {/* Hero Section */}
-      <div className="w-full relative pt-56 pb-16 px-8 text-white" style={{ minHeight: '340px' }}>
+      <div className="w-full relative pt-56 pb-16 px-8 text-off-white" style={{ minHeight: '340px' }}>
         <Image
           src="/images/niagara-falls.png"
           alt="Niagara Falls Hero"
@@ -121,11 +121,11 @@ const Projects = (): JSX.Element => {
             <div className="flex-1 flex flex-col justify-between">
               <div>
                 <div className="flex flex-wrap gap-2 mb-2">
-                  <span className={`px-3 py-1 rounded border text-xs font-semibold ${statusColors[project.status]}`}>{project.status.toUpperCase()}</span>
-                  <span className="px-3 py-1 rounded border text-xs font-semibold bg-white text-black border-gray-300">{project.type.toUpperCase()}</span>
-                  <span className="px-3 py-1 rounded border text-xs font-semibold bg-white text-black border-gray-300">{project.class.toUpperCase()}</span>
+                  <span className={`px-3 py-1 text-xs font-medium ${statusColors[project.status]}`}>{project.status.toUpperCase()}</span>
+                  <span className="px-3 py-1 text-xs font-medium bg-white text-black border-gray-300">{project.type.toUpperCase()}</span>
+                  <span className="px-3 py-1 text-xs font-medium bg-white text-black border-gray-300">{project.class.toUpperCase()}</span>
                 </div>
-                <h3 className="text-2xl font-bold mb-1">{project.name}</h3>
+                <h3 className="text-2xl font-medium tracking-wide mb-1">{project.name}</h3>
                 <p className="italic text-gray-700 mb-2">{project.description}</p>
                 <p className="text-xs text-gray-500 uppercase tracking-wide mb-4">{project.location}</p>
               </div>

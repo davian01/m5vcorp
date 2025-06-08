@@ -25,7 +25,7 @@ export default async function ProjectPage({ params }: { params: { slug: string }
   }
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-off-white">
       {/* Hero Section */}
       <div className="w-full relative pt-56 pb-24 px-8 text-white" style={{ minHeight: '480px' }}>
         <Image
@@ -63,7 +63,7 @@ export default async function ProjectPage({ params }: { params: { slug: string }
               {/* Stats Grid */}
               <div className="grid grid-cols-2 px-[2rem]">
                 {Object.entries(project.stats).map(([key, value]) => (
-                  <div key={key} className="bg-white p-2 hover:shadow-lg transition-shadow">
+                  <div key={key} className="bg-off-white p-2 hover:shadow-lg transition-shadow">
                     <p className="text-sm text-gray-500 capitalize mb-1">{formatKey(key)}</p>
                     <p className="text-xl font-semibold">{value}</p>
                   </div>

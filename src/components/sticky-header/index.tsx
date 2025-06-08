@@ -27,7 +27,7 @@ const StickyHeader = () => {
       {/* Top ticker with gradient background */}
       <div className="h-8 bg-gradient-to-r from-black-primary to-accent-blue flex items-center px-6">
         <p className="text-off-white text-small">
-          Latest: Slate Asset Management Completes Strategic Investment
+          Latest: M5V DEVELOPMENTS HAS A CORPORATE WEBSITE (in development)
         </p>
       </div>
 
@@ -115,10 +115,10 @@ const StickyHeader = () => {
 
           {/* Login Button */}
           <a 
-            href="/login" 
+            href="/contact" 
             className="border border-off-white text-off-white hover:bg-accent-blue hover:border-accent-blue px-6 py-2 rounded-sm transition-colors"
           >
-            Login
+            Contact Us
           </a>
         </div>
       </nav>

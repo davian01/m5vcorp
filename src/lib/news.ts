@@ -17,6 +17,34 @@ During his career, Mr. Viswanathan has worked for some of the largest Canadian r
     category: 'Press Release'
   },
   {
+    id: 'niagara-phase-1',
+    headline: 'Bringing Stacked Towns to Niagara: What Phase 1 Taught Us',
+    date: '2024-03-15',
+    author: 'Sherard McQueen',
+    preview: 'When we broke ground on The Niagara Phase 1, stacked townhomes were virtually unheard of in the Niagara region. Local product leaned toward traditional two-storey homes, but we saw an opportunity: increase density, maintain liveability, and unlock affordability for a new generation of buyers.',
+    body: `When we broke ground on The Niagara Phase 1, stacked townhomes were virtually unheard of in the Niagara region. Local product leaned toward traditional two-storey homes, but we saw an opportunity: increase density, maintain liveability, and unlock affordability for a new generation of buyers.
+
+Our vision was to create a community that combined the best of urban living with the comfort of suburban life. The stacked townhome design allowed us to maximize land use while providing residents with private outdoor spaces and modern amenities.
+
+The project's success has demonstrated that innovative housing solutions can thrive in secondary markets. By challenging conventional wisdom and focusing on quality design, we've created a blueprint for future developments in the region.`,
+    image: '/images/m5v_portfolio/niagara-phase-1.png',
+    category: 'Case Study'
+  },
+  {
+    id: 'muskoka-cottages',
+    headline: 'How Strategic Expertise Unlocked The Muskoka After a Decade of Delay',
+    date: '2024-02-28',
+    author: 'Yaseen Nimjee',
+    preview: 'The Muskoka Cottages project presented a unique challenge: a prime development site locked in a ten-year stalemate of regulatory hurdles and local skepticism. This case study reveals the strategic insights and expert navigation that allowed us to break through the impasse, secure approvals, and deliver a sought-after community.',
+    body: `The Muskoka Cottages project presented a unique challenge: a prime development site locked in a ten-year stalemate of regulatory hurdles and local skepticism. This case study reveals the strategic insights and expert navigation that allowed us to break through the impasse, secure approvals, and deliver a sought-after community.
+
+Our approach combined deep market understanding with innovative solutions to address local concerns. We worked closely with community stakeholders to ensure the development aligned with the region's character while meeting modern living standards.
+
+The project's success demonstrates how persistence, expertise, and community engagement can transform challenging situations into opportunities for growth and development.`,
+    image: '/images/m5v_portfolio/the-muskoka.jpg',
+    category: 'Case Study'
+  },
+  {
     id: 'niagara-completion',
     headline: 'The Niagara Phase 1 Reaches Successful Completion',
     date: '2024-03-15',

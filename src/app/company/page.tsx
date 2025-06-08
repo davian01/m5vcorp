@@ -2,6 +2,8 @@
 
 import Image from 'next/image';
 import React, { useState } from 'react';
+import { newsItems } from '@/lib/news';
+import NewsCard from '@/components/news/NewsCard';
 
 export default function CompanyPage(): JSX.Element {
   const [activeSlide, setActiveSlide] = useState<'purpose' | 'vision'>('purpose');
@@ -67,16 +69,16 @@ export default function CompanyPage(): JSX.Element {
             className="object-cover"
             priority
           />
-          <div className="absolute inset-0 bg-black/50 flex items-center justify-center">
+          <div className="absolute inset-0 bg-black-primary/80 flex items-center justify-center">
             <div className="max-w-3xl mx-auto px-32 relative">
               <div className="relative overflow-hidden">
-                <div className={`transition-transform duration-500 ${activeSlide === 'purpose' ? 'translate-x-0' : '-translate-x-full'}`}>
+                <div className={`transition-all duration-500 ${activeSlide === 'purpose' ? 'translate-x-0 opacity-100' : '-translate-x-full opacity-0'}`}>
                   <p className="text-small uppercase tracking-wide text-off-white">Purpose</p>
-                  <h3 className="text-h3 leading-snug mt-2 text-off-white">
+                  <h3 className="text-h3 leading-snug mt-2 font-medium text-off-white">
                     Building communities<br />where value and design finally meet.
                   </h3>
                 </div>
-                <div className={`absolute top-0 left-0 w-full transition-transform duration-500 ${activeSlide === 'vision' ? 'translate-x-0' : 'translate-x-full'}`}>
+                <div className={`absolute top-0 left-0 w-full transition-all duration-500 ${activeSlide === 'vision' ? 'translate-x-0 opacity-100' : 'translate-x-full opacity-0'}`}>
                   <p className="text-small uppercase tracking-wide text-off-white">Vision</p>
                   <h3 className="text-h3 leading-snug mt-2 text-off-white">
                     Creating sustainable<br />communities that stand the test of time.
@@ -85,9 +87,19 @@ export default function CompanyPage(): JSX.Element {
               </div>
               <button 
                 onClick={toggleSlide}
-                className="absolute right-0 top-1/2 -translate-y-1/2 text-off-white hover:text-accent-blue transition-colors"
+                className={`absolute top-1/2 -translate-y-1/2 text-off-white hover:text-accent-blue transition-colors ${activeSlide === 'vision' ? 'left-0' : 'right-0'}`}
               >
-                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <svg 
+                  width="32" 
+                  height="32" 
+                  viewBox="0 0 24 24" 
+                  fill="none" 
+                  stroke="currentColor" 
+                  strokeWidth="2" 
+                  strokeLinecap="round" 
+                  strokeLinejoin="round"
+                  className={`transition-transform duration-300 ${activeSlide === 'vision' ? 'rotate-180' : ''}`}
+                >
                   <path d="m9 18 6-6-6-6"/>
                 </svg>
               </button>
@@ -103,63 +115,14 @@ export default function CompanyPage(): JSX.Element {
           Our Projects Are Built for Success. See It Yourself.
         </h2>
 
-        <article className="grid md:grid-cols-12 gap-12 items-center">
-          <div className="md:col-span-4">
-            <div className="relative aspect-[5/3] max-h-[20rem] w-full">
-              <Image
-                src="/images/m5v_portfolio/niagara-phase-1.png"
-                alt="The Niagara Phase 1 Project"
-                fill
-                className="object-cover"
-              />
-            </div>
-          </div>
-          <div className="md:col-span-5 flex flex-col justify-center">
-            <h3 className="text-3xl sm:text-4xl font-light mb-4">
-              Bringing Stacked Towns to Niagara: What Phase 1 Taught Us
-            </h3>
-            <p className="text-gray-600 mb-6">
-              When we broke ground on The Niagara Phase 1, stacked townhomes were virtually unheard of in the Niagara region. 
-              Local product leaned toward traditional two-storey homes, but we saw an opportunity: 
-              increase density, maintain liveability, and unlock affordability for a new generation of buyers. 
-            </p>
-            <button className="text-sm font-semibold tracking-wider uppercase inline-flex items-center gap-2 text-accent-blue hover:text-black-primary transition-colors">
-              Learn More
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                <path d="m9 18 6-6-6-6"/>
-              </svg>
-            </button>
-          </div>
-        </article>
-
-        <article className="grid md:grid-cols-12 gap-12 items-center mt-16">
-          <div className="md:col-span-4">
-            <div className="relative aspect-[5/3] max-h-[20rem] w-full">
-              <Image
-                src="/images/m5v_portfolio/the-muskoka.jpg"
-                alt="The Muskoka Cottages Project"
-                fill
-                className="object-cover"
-              />
-            </div>
-          </div>
-          <div className="md:col-span-5 flex flex-col justify-center">
-            <h3 className="text-3xl sm:text-4xl font-light mb-4">
-            How Strategic Expertise Unlocked The Muskoka After a Decade of Delay
-            </h3>
-            <p className="text-gray-600 mb-6">
-            The Muskoka Cottages project presented a unique challenge: 
-            a prime development site locked in a ten-year stalemate of regulatory hurdles and local skepticism. 
-            This case study reveals the strategic insights and expert navigation that allowed us to break through the impasse, secure approvals, and deliver a sought-after community.
-            </p>
-            <button className="text-sm font-semibold tracking-wider uppercase inline-flex items-center gap-2 text-accent-blue hover:text-black-primary transition-colors">
-              Learn More
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                <path d="m9 18 6-6-6-6"/>
-              </svg>
-            </button>
-          </div>
-        </article>
+        <div className="space-y-12">
+          {newsItems
+            .filter(item => item.category === 'Case Study')
+            .map(item => (
+              <NewsCard key={item.id} item={item} />
+            ))
+          }
+        </div>
       </section>
 
       {/* Partners */}

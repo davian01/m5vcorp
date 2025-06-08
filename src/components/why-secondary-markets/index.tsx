@@ -26,7 +26,7 @@ const WhySecondaryMarkets = () => {
             Why Secondary Markets
           </h3>
           <h2 className="text-[2.75rem] leading-tight font-medium  text-off-white">
-            The Opportunity Outside Big-City Cores
+            We See Opportunity Outside Big-City Cores
           </h2>
         </div>
 

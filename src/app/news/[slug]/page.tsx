@@ -2,6 +2,7 @@ import { notFound } from 'next/navigation';
 import { formatDate } from '@/lib/utils';
 import { newsItems } from '@/lib/news';
 import Image from 'next/image';
+import Link from 'next/link';
 
 interface PageProps {
   params: {
@@ -25,6 +26,26 @@ export default async function NewsArticlePage({ params }: PageProps) {
   return (
     <main className="pt-[128px]">
       <article className="max-w-4xl mx-auto px-4 py-8">
+        <Link 
+          href="/news" 
+          className="inline-flex items-center text-gray-600 hover:text-gray-900 mb-8 transition-colors"
+        >
+          <svg 
+            className="w-5 h-5 mr-2" 
+            fill="none" 
+            stroke="currentColor" 
+            viewBox="0 0 24 24" 
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path 
+              strokeLinecap="round" 
+              strokeLinejoin="round" 
+              strokeWidth={2} 
+              d="M15 19l-7-7 7-7" 
+            />
+          </svg>
+          Back to News
+        </Link>
         <div className="mb-8">
           <span className="text-sm font-medium text-blue-600">{article.category}</span>
           <h1 className="text-4xl font-bold mb-4 mt-2">{article.headline}</h1>

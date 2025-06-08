@@ -45,7 +45,7 @@ export default function CareersPage() {
 
       {/* Intro Section */}
       <section className="bg-off-white py-16">
-        <div className="container mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-12">
+        <div className="container mx-auto px-16 flex flex-col md:flex-row items-center justify-between gap-12">
           <div className="md:w-2/5 h-[400px] bg-gray-400" />
           <div className="w-full md:w-1/2 flex flex-col items-end text-right space-y-2 max-w-2xl pr-12 md:pr-24 lg:pr-32">
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-light mb-1">Ambitious Projects Need Ambitious People</h2>
@@ -79,13 +79,15 @@ export default function CareersPage() {
                 }
               >
                 <div className="flex-1 flex flex-col justify-center relative">
-                  <div className="absolute left-0 top-1/2 -translate-y-1/2 flex flex-col items-start pl-4">
-                    <span className="text-lg font-calibre tracking-wider rotate-90 whitespace-nowrap text-left text-white mb-8">
+                  <div className="absolute inset-0 flex items-center justify-center">
+                    <span
+                      className={`text-xl font-calibre tracking-wider -rotate-90 origin-center whitespace-nowrap text-center text-off-white font-medium${showContent === i ? ' -ml-36 md:-ml-64' : ''}`}
+                    >
                       {String(i+1).padStart(2,'0')} {val.title.toUpperCase()}
                     </span>
                   </div>
                   {showContent === i && (
-                    <div className="flex flex-col justify-center items-end pr-8 pl-24 py-8 w-full">
+                    <div className="flex flex-col justify-center items-end pr-12 pl-40 py-8 w-full">
                       <p className="text-white text-body text-right leading-relaxed max-w-xs md:max-w-sm lg:max-w-md">
                         {val.body}
                       </p>
@@ -101,8 +103,8 @@ export default function CareersPage() {
 
       {/* Benefits List */}
       <section className="bg-off-white py-16">
-        <div className="container mx-auto px-14">
-          <h2 className="text-h2 font-bold font-calibre text-black-primary">Why Work for Us</h2>
+        <div className="container mx-auto px-16">
+          <h2 className="text-h2 font-medium font-calibre text-black-primary">Why Work for Us</h2>
           <p className="mt-2 mb-8 text-body">Our Commitment to Talent and Growth</p>
           <div className="space-y-4">
             {[
@@ -116,7 +118,7 @@ export default function CareersPage() {
               <div key={i} className="flex items-start py-4 border-t border-gray-200">
                 <div className="w-8 h-8 bg-accent-blue/20 mr-4 rounded-full" />
                 <div>
-                  <div className="font-bold text-black-primary text-body">{item.title}</div>
+                  <div className="font-medium text-black-primary text-body">{item.title}</div>
                   <div className="text-black-primary text-small">{item.desc}</div>
                 </div>
               </div>
@@ -130,20 +132,20 @@ export default function CareersPage() {
         <div className="container mx-auto px-16 grid grid-cols-1 md:grid-cols-2 gap-8">
           {/* Left */}
           <div>
-            <h3 className="text-h3 font-bold">Ready to take the Next Step?</h3>
+            <h3 className="text-h2 font-medium">Ready to take the Next Step?</h3>
             <p className="mt-2 text-body">Discover how your ambition can shape the future with us.</p>
             <Link href="/jobs" className="mt-4 inline-block border border-off-white text-off-white px-6 py-2 hover:bg-accent-blue hover:text-off-white transition-colors">
-              VIEW ALL JOBS
+              View All Jobs
             </Link>
           </div>
           {/* Right */}
           <div>
-            <h3 className="text-h3 font-bold">Can't Find a Job You're Looking For?</h3>
+            <h3 className="text-h2 font-medium">Can't Find a Job You're Looking For?</h3>
             <p className="mt-2 text-body">
               Send us your resume and cover letter — and let's start the conversation.
             </p>
             <Link href="mailto:hiring@m5vinc.com" className="mt-4 inline-block border border-off-white text-off-white px-6 py-2 hover:bg-accent-blue hover:text-off-white transition-colors">
-              APPLY HERE
+              Apply Here
             </Link>
           </div>
         </div>
