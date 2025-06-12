@@ -1,11 +1,14 @@
-import React from 'react';
+"use client";
+import React, { useState, useMemo } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
+import ProjectFilters from '@/components/ProjectFilters';
 
 interface Project {
   name: string;
   slug: string;
   location: string;
+  city: string;
   status: 'Active' | 'Completed' | 'Coming Soon';
   type: string;
   class: string;
@@ -18,6 +21,7 @@ const projects: Project[] = [
     name: 'Le FALLS',
     slug: 'le-falls',
     location: 'Niagara Falls, Ontario',
+    city: 'Niagara Falls',
     status: 'Active',
     type: 'Development',
     class: 'Townhomes',
@@ -28,6 +32,7 @@ const projects: Project[] = [
     name: 'NIAGARA ON THE BEACH',
     slug: 'niagara-on-the-beach',
     location: 'Fort Erie, Ontario',
+    city: 'Fort Erie',
     status: 'Active',
     type: 'Development',
     class: 'Townhomes',
@@ -38,6 +43,7 @@ const projects: Project[] = [
     name: 'SUNDIAL RETIREMENT',
     slug: 'sundial-retirement',
     location: 'Orillia, Ontario',
+    city: 'Orillia',
     status: 'Completed',
     type: 'Operating',
     class: 'Retirement Home',
@@ -48,6 +54,7 @@ const projects: Project[] = [
     name: 'THE NIAGARA PHASE 1',
     slug: 'niagara-phase-1',
     location: 'Niagara Falls, Ontario',
+    city: 'Niagara Falls',
     status: 'Completed',
     type: 'Development',
     class: 'Stacked Townhomes',
@@ -58,6 +65,7 @@ const projects: Project[] = [
     name: 'THE NIAGARA PHASE 2',
     slug: 'the-niagara-phase-2',
     location: 'Niagara Falls, Ontario',
+    city: 'Niagara Falls',
     status: 'Coming Soon',
     type: 'Development',
     class: 'Stacked Townhomes',
@@ -68,6 +76,7 @@ const projects: Project[] = [
     name: 'THE MUSKOKA',
     slug: 'the-muskoka',
     location: 'Georgian Bay, Ontario',
+    city: 'Georgian Bay',
     status: 'Active',
     type: 'Development',
     class: 'Detached',
@@ -82,7 +91,32 @@ const statusColors: Record<string, string> = {
   'Coming Soon': 'bg-sky-200 text-sky-800',
 };
 
+// Dynamically generate city options from projects
+const CITY_OPTIONS = Array.from(new Set(projects.map(p => p.city)));
+
 const Projects = (): JSX.Element => {
+  // --- filter state ---
+  const [search, setSearch] = useState('');
+  const [locations, setLocations] = useState<string[]>([]);
+  const [statuses, setStatuses] = useState<string[]>([]);
+
+  // --- filtered list ---
+  const filteredProjects = useMemo(() => {
+    return projects.filter(p => {
+      const matchesSearch =
+        p.name.toLowerCase().includes(search.toLowerCase()) ||
+        p.description.toLowerCase().includes(search.toLowerCase());
+      const matchesLocation =
+        !locations.length || locations.includes(p.city);
+      const matchesStatus =
+        !statuses.length || statuses.includes(p.status);
+      return matchesSearch && matchesLocation && matchesStatus;
+    });
+  }, [search, locations, statuses]);
+
+  // Only pass city names to ProjectFilters
+  const selectedCities = locations;
+
   return (
     <div className="bg-off-white min-h-screen text-black-primary">
       {/* Hero Section */}
@@ -102,9 +136,29 @@ const Projects = (): JSX.Element => {
         </div>
       </div>
 
-      {/* Projects List */}
+      {/* --- Search & Filters Row --- */}
+      <div className="max-w-5xl mx-auto px-8 border-b">
+        <ProjectFilters
+          count={filteredProjects.length}
+          locations={selectedCities}
+          statuses={statuses}
+          cityOptions={CITY_OPTIONS}
+          onChange={({ search: s, locations: l, statuses: st, clearAll }: { search?: string; locations?: string[]; statuses?: string[]; clearAll?: boolean }) => {
+            if (clearAll) {
+              setSearch('');
+              setLocations([]);
+              setStatuses([]);
+            }
+            if (s !== undefined) setSearch(s);
+            if (l !== undefined) setLocations(l);
+            if (st !== undefined) setStatuses(st);
+          }}
+        />
+      </div>
+
+      {/* --- Projects List --- */}
       <div className="max-w-5xl mx-auto px-8 py-12 space-y-12">
-        {projects.map((project) => (
+        {filteredProjects.map((project) => (
           <div key={project.slug} className="flex flex-col md:flex-row gap-6 border-b pb-8 last:border-b-0">
             {/* Project Image */}
             <div className="w-full md:w-64 h-48 bg-gray-200 relative flex-shrink-0">
