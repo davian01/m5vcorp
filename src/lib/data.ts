@@ -18,9 +18,9 @@ export const projects: Project[] = [
     },
     longDescription: "Experience contemporary living at The Niagara in Niagara Falls. Developed by M5V Developments, this project includes 3-story buildings with various suite sizes. Residents will enjoy modern interiors and access to Niagara Falls' attractions. The Niagara presents an attractive investment opportunity, benefiting from area development and demand for housing.",
     images: [
-      "/images/m5v_portfolio/le-falls/le_falls_aerial.png",
-      "/images/m5v_portfolio/le-falls/le_falls_closeup.png",
-      "/images/m5v_portfolio/le-falls/le_falls_living.png"
+      "/images/m5v_portfolio/le-falls/Le_Falls_Aerial.png",
+      "/images/m5v_portfolio/le-falls/Le_Falls_CloseUp.png",
+      "/images/m5v_portfolio/le-falls/Le_Falls_Living.png"
     ]
   },
   {
@@ -63,9 +63,9 @@ export const projects: Project[] = [
     },
     longDescription: "Experience contemporary living at The Niagara in Niagara Falls. Developed by M5V Developments, this project includes 3-story buildings with various suite sizes. Residents will enjoy modern interiors and access to Niagara Falls' attractions. The Niagara presents an attractive investment opportunity, benefiting from area development and demand for housing.",
     images: [
-      "/images/m5v_portfolio/niagara-on-the-beach/crystal beach_renders_site aerial 1.jpg",
-      "/images/m5v_portfolio/niagara-on-the-beach/crystal beach_renders_daytime 1.jpg",
-      "/images/m5v_portfolio/niagara-on-the-beach/crystal beach_renders_daytime 3.png"
+      "/images/m5v_portfolio/niagara-on-the-beach/Crystal Beach_Renders_Site Aerial 1.jpg",
+      "/images/m5v_portfolio/niagara-on-the-beach/Crystal Beach_Renders_Daytime 1.jpg",
+      "/images/m5v_portfolio/niagara-on-the-beach/Crystal Beach_Renders_Daytime 3.png"
     ]
   },
   {
@@ -85,9 +85,9 @@ export const projects: Project[] = [
     },
     longDescription: "Experience contemporary living at The Niagara in Niagara Falls. Developed by M5V Developments, this project includes 3-story buildings with various suite sizes. Residents will enjoy modern interiors and access to Niagara Falls' attractions. The Niagara presents an attractive investment opportunity, benefiting from area development and demand for housing.",
     images: [
-      "/images/m5v_portfolio/sundial-lakeview-retirement/sl_drone.png",
-      "/images/m5v_portfolio/sundial-lakeview-retirement/sundiallakeview_closeup.jpg",
-      "/images/m5v_portfolio/sundial-lakeview-retirement/sundiallakeview_bedroom.png"
+      "/images/m5v_portfolio/sundial-lakeview-retirement/SL_Drone.png",
+      "/images/m5v_portfolio/sundial-lakeview-retirement/SundialLakeview_CloseUp.jpg",
+      "/images/m5v_portfolio/sundial-lakeview-retirement/SundialLakeview_Bedroom.png"
     ]
   },
   {
@@ -107,9 +107,9 @@ export const projects: Project[] = [
     },
     longDescription: "Experience contemporary living at The Niagara in Niagara Falls. Developed by M5V Developments, this project includes 3-story buildings with various suite sizes. Residents will enjoy modern interiors and access to Niagara Falls' attractions. The Niagara presents an attractive investment opportunity, benefiting from area development and demand for housing.",
     images: [
-      "/images/m5v_portfolio/the-muskoka/muskoka_aerial.jpg",
-      "/images/m5v_portfolio/the-muskoka/muskoka_siteview.png",
-      "/images/m5v_portfolio/the-muskoka/muskoka_bedroom.png"
+      "/images/m5v_portfolio/the-muskoka/Muskoka_Aerial.jpg",
+      "/images/m5v_portfolio/the-muskoka/Muskoka_SiteView.png",
+      "/images/m5v_portfolio/the-muskoka/Muskoka_Bedroom.png"
     ]
   },
   {
@@ -130,8 +130,8 @@ export const projects: Project[] = [
     longDescription: "Experience contemporary living at The Niagara in Niagara Falls. Developed by M5V Developments, this project includes 3-story buildings with various suite sizes. Residents will enjoy modern interiors and access to Niagara Falls' attractions. The Niagara presents an attractive investment opportunity, benefiting from area development and demand for housing.",
     images: [
       "/images/m5v_portfolio/the-niagara-phase-2/Phase2_Exterior_Render.png",
-      "/images/m5v_portfolio/the-muskoka/muskoka_siteview.png",
-      "/images/m5v_portfolio/the-muskoka/muskoka_bedroom.png"
+      "/images/m5v_portfolio/the-muskoka/Muskoka_SiteView.png",
+      "/images/m5v_portfolio/the-muskoka/Muskoka_Bedroom.png"
     ]
   }
 ]; 
