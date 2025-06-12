@@ -50,7 +50,7 @@ const PlatformCards = () => {
               </div>
 
               {/* Content */}
-              <div className="py-6 px-8">
+              <div className="py-6">
                 <h3 className="text-xl font-medium mb-3">
                   <span className="text-accent-blue">{platform.title}</span>
                 </h3>
