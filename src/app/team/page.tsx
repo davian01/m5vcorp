@@ -71,26 +71,6 @@ Committed to operational excellence, Leo has implemented lean management program
       linkedinId: 'leo-thomas'
     },
     { 
-      name: 'Reza Farahdel', 
-      position: 'Controller', 
-      image: '/images/team/reza-edit1.webp',
-      bio: `Reza Farahdel is a Certified Public Accountant with extensive experience in financial management and reporting. His expertise in accounting principles and financial analysis helps ensure M5V's financial operations run smoothly and efficiently.
-
-As Controller, Reza manages all aspects of financial reporting, budgeting, and internal controls, providing valuable insights to support strategic decision-making and business growth.`,
-      slug: 'reza-farahdel-cpa',
-      linkedinId: 'reza-farahdel'
-    },
-    { 
-      name: 'Yogesh Karia', 
-      position: 'Project Manager', 
-      image: '/images/team/yogesh.webp',
-      bio: `Yogesh Karia is a highly accomplished Project Manager with over 40 years of experience leading multi-million dollar residential, commercial, hospitality, and industrial projects across Canada and internationally. He's known for flawlessly guiding projects from pre-construction to occupancy, consistently ensuring timely delivery and budget adherence.
-
-Yogesh brings hands-on expertise in advanced construction methods like ICF walls, pile foundations, and precast building systems, even excelling in extreme weather conditions. Holding a Bachelor of Civil Engineering, being a Certified Engineering Technician (CET), and a LEED Accredited Professional, he champions sustainable practices, safety, and quality control. Yogesh's vast experience and commitment to excellence make him an invaluable asset to any project.`,
-      slug: 'yogesh-karia',
-      linkedinId: 'yogesh-karia-c-e-t-leed-ap-94194620'
-    },
-    { 
       name: 'Martina Cabrera', 
       position: 'Director,\nMarketing', 
       image: '/images/team/martina.webp',
@@ -119,41 +99,14 @@ Martina consistently helps brands achieve millions of impressions and significan
       linkedinId: ''
     },
     { 
-      name: 'Rodrigo Burgos', 
-      position: 'Construction Estimator', 
-      image: '/images/team/rodrigo.webp',
-      bio: `Rodrigo Burgos is a highly experienced Construction Estimator with over 20 years of expertise in Quantity Surveying for ICI (Industrial, Commercial, Institutional) and Residential projects. His comprehensive background includes detailed estimation for structural, architectural, mechanical, and civil works, ensuring thorough and accurate project cost analysis.
-
-Rodrigo is a distinguished member of the Canadian Institute of Quantity Surveyors as a Construction Estimator Certified (CIQS-CEC). He also holds a Bachelor of Science in Civil Engineering (BSCE) and is a Registered Licensed Professional Civil Engineer in the Philippines (PRC Licensed), underscoring his deep technical knowledge and professional accreditation.`,
-      slug: 'rodrigo-burgos',
-      linkedinId: ''
-    },
-    { 
       name: 'Davian Brooks', 
       position: 'Analyst', 
       image: '/images/team/davian.webp',
       bio: ``,
       slug: 'davian-brooks',
       linkedinId: 'davianbrooks'
-    },
-    { 
-      name: 'Alex Tran', 
-      position: 'Editor', 
-      image: '/images/team/alex.webp',
-      bio: `Alex Tran brings a strong foundation in financial reporting, audit, and operations, cultivated through his roles at the Ontario Public Service, the CRA, and Fidelity Investments. Throughout his career, Alex has developed a keen ability to dig into data, identify patterns, and empower teams to make informed, strategic decisions.
+    }
 
-Currently on the path to earning his CPA designation, Alex is driven by the opportunity to tackle complex challenges and contribute meaningfully to an organization. His expertise spans audit, advisory, and financial analysis, reflecting his commitment to both precision and insightful contributions.`,
-      slug: 'alex-tran',
-      linkedinId: 'alex-tran-619853234'
-    },
-    { 
-      name: 'Pritica Kher', 
-      position: 'Project Manager',
-      image: '/images/team/pritica-kher.webp',
-      bio: ` `,
-      slug: 'pritica-kher',
-      linkedinId: 'pritica-kher-5843b8315'
-    },
   ];
 
   return (
