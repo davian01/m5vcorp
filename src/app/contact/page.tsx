@@ -103,27 +103,28 @@ export default function ContactPage() {
 
       {/* Main Container */}
       <div className="w-full px-4 md:px-8">
-        <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-0">
-          {/* Left Panel */}
-          <div className="md:col-span-5 flex flex-col items-center md:items-start px-0 md:px-0 mb-12 md:mb-0">
-            <div className="w-full aspect-[3/5] relative overflow-hidden mb-8">
-              <Image
-                src="/images/location/t3-sterling-2.webp"
-                alt="Location"
-                fill
-                sizes="(max-width: 768px) 100vw, 50vw"
-                className="object-cover"
-                priority
-              />
-            </div>
-            <div className="flex flex-col gap-2 w-full px-0 md:px-0">
-              <div className="text-[16px] leading-[24px] text-off-white">150 Sterling Rd,<br />Toronto,<br />ON M6R 0C6<br />Unit 301</div>
-              <div className="text-[16px] leading-[24px] text-off-white">info@m5vinc.com</div>
-            </div>
+        <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-12 md:grid-rows-[1fr_auto] gap-0">
+          {/* Image — matches form height on desktop */}
+          <div className="order-1 md:col-span-5 md:row-start-1 relative w-full overflow-hidden aspect-[3/5] md:aspect-auto md:h-full md:min-h-0">
+            <Image
+              src="/images/location/610-Applewood-1.webp"
+              alt="Location"
+              fill
+              sizes="(max-width: 768px) 100vw, 560px"
+              unoptimized
+              className="object-cover object-center"
+              priority
+            />
+          </div>
+
+          {/* Address — under image */}
+          <div className="order-2 md:order-3 md:col-span-5 md:row-start-2 flex flex-col gap-2 w-full mt-8 mb-12 md:mb-0">
+            <div className="text-[16px] leading-[24px] text-off-white">610 Applewood Crescent,<br />Vaughan,<br />ON L4K 0E3<br />Unit 501</div>
+            <div className="text-[16px] leading-[24px] text-off-white">info@m5vinc.com</div>
           </div>
 
           {/* Right Panel */}
-          <div className="md:col-start-7 md:col-end-13 w-full bg-accent-blue p-6 md:p-10 pt-12 md:pt-16 flex flex-col">
+          <div className="order-3 md:order-2 md:col-start-7 md:col-end-13 md:row-start-1 w-full bg-accent-blue p-6 md:p-10 pt-12 md:pt-16 flex flex-col">
             <h2 className="mb-8 md:mb-10 text-3xl sm:text-4xl md:text-5xl font-medium text-off-white">Send an Inquiry</h2>
             
             {/* Status Messages */}
